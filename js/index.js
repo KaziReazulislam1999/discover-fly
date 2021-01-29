@@ -13,25 +13,10 @@ function handlerFirstClassTicketChange(isIncrease) {
         firstClassTicketNewCount = firstClassTicketCount - 1;
     }
     firstClassTicketInput.value = firstClassTicketNewCount;
+    
+    calculateTotal();
 
 }
-
-
-// First Class Ticket Count Increase
-const firstClassTicketIncreaseBtn = document.getElementById("first-class-increase");
-firstClassTicketIncreaseBtn.addEventListener("click", function () {
-
-    handlerFirstClassTicketChange(true);
-    calculateTotal();
-
-});
-
-// First Class Ticket Count Decrease
-const firstClassTicketDecreaseBtn = document.getElementById("first-class-decrease");
-firstClassTicketDecreaseBtn.addEventListener("click", function () {
-    handlerFirstClassTicketChange(false);
-    calculateTotal();
-});
 
 
 // Economy Ticket Count For Increase And Decrease
@@ -51,25 +36,9 @@ function handlerEconomyTicketChange(isIncrease) {
     economyTicketCount.value = economyTicketNewCount;
     document.getElementById("economy-count").value = economyTicketNewCount;
 
+    calculateTotal();
+
 }
-
-
-// Economy Ticket Count Increase
-const economyTicketIncreaseBtn = document.getElementById("economy-increase");
-economyTicketIncreaseBtn.addEventListener("click", function () {
-
-    handlerEconomyTicketChange(true);
-    calculateTotal();
-
-});
-
-// Economy Ticket Count Decrease
-
-const economyTicketdecreaseBtn = document.getElementById("economy-decrease");
-economyTicketdecreaseBtn.addEventListener("click", function () {
-    handlerEconomyTicketChange(false);
-    calculateTotal();
-});
 
 
 function calculateTotal() {
@@ -92,74 +61,111 @@ function calculateTotal() {
     const totalAmmount = subTotal + vatAmmount ;
     document.getElementById("total-ammount").innerText = totalAmmount ;
 
-
 }
 
 
 
-// // First Class Ticket Increase
-// const firstClassTicketIncreaseBtn = document.getElementById("first-class-increase");
-// firstClassTicketIncreaseBtn.addEventListener("click", function () {
+/*
+// First Class Ticket Increase
+const firstClassTicketIncreaseBtn = document.getElementById("first-class-increase");
+firstClassTicketIncreaseBtn.addEventListener("click", function () {
 
-//     const firstClassTicketInput = document.getElementById("first-class-count");
-//     const firstClassTicketCount = parseInt(firstClassTicketInput.value);
-//     const firstClassTicketNewCount = firstClassTicketCount + 1;
-//     firstClassTicketInput.value = firstClassTicketNewCount;
+    const firstClassTicketInput = document.getElementById("first-class-count");
+    const firstClassTicketCount = parseInt(firstClassTicketInput.value);
+    const firstClassTicketNewCount = firstClassTicketCount + 1;
+    firstClassTicketInput.value = firstClassTicketNewCount;
 
-//     const firstClassTicketTotal = firstClassTicketNewCount * 150;
+    const firstClassTicketTotal = firstClassTicketNewCount * 150;
+    document.getElementById("sub-total").innerText = firstClassTicketTotal;
 
-//     document.getElementById("sub-total").innerText = firstClassTicketTotal;
+});
+*/ 
 
-// });
+/*
+// First Class Ticket Decrease
+const firstClassTicketDecreaseBtn = document.getElementById("first-class-decrease");
+firstClassTicketDecreaseBtn.addEventListener("click", function () {
 
-// // First Class Ticket Decrease
-// const firstClassTicketDecreaseBtn = document.getElementById("first-class-decrease");
-// firstClassTicketDecreaseBtn.addEventListener("click", function () {
+    const firstClassTicketInput = document.getElementById("first-class-count");
+    const firstClassTicketCount = parseInt(firstClassTicketInput.value);
+    const firstClassTicketNewCount = firstClassTicketCount - 1;
+    firstClassTicketInput.value = firstClassTicketNewCount;
 
-//     const firstClassTicketInput = document.getElementById("first-class-count");
-//     const firstClassTicketCount = parseInt(firstClassTicketInput.value);
+    const firstClassTicketTotal = firstClassTicketNewCount * 150;
+    document.getElementById("sub-total").innerText = firstClassTicketTotal;
 
-//     const firstClassTicketNewCount = firstClassTicketCount - 1;
-//     firstClassTicketInput.value = firstClassTicketNewCount;
+});
+*/ 
 
-//     const firstClassTicketTotal = firstClassTicketNewCount * 150;
+/*
+// Economy Ticket Increase
+const economyTicketIncreaseBtn = document.getElementById("economy-increase");
+economyTicketIncreaseBtn.addEventListener("click", function () {
 
-//     document.getElementById("sub-total").innerText = firstClassTicketTotal;
+    const economyTicketCount = document.getElementById("economy-count");
+    const economyTicketInputCount = parseInt(economyTicketCount.value);
+    const economyTicketNewCount = economyTicketInputCount + 1;
+    economyTicketCount.value = economyTicketNewCount;
+    document.getElementById("economy-count").value = economyTicketNewCount;
 
-// });
+    const economyTicketTotalCount = economyTicketNewCount * 100;
+    document.getElementById("sub-total").innerText = economyTicketTotalCount;
 
-// // Economy Ticket Increase
+});
+*/ 
 
-// const economyTicketIncreaseBtn = document.getElementById("economy-increase");
-// economyTicketIncreaseBtn.addEventListener("click", function () {
+/*
+// First Class Ticket Count Increase
+const firstClassTicketIncreaseBtn = document.getElementById("first-class-increase");
+firstClassTicketIncreaseBtn.addEventListener("click", function () {
 
-//     const economyTicketCount = document.getElementById("economy-count");
-//     const economyTicketInputCount = parseInt(economyTicketCount.value);
-//     const economyTicketNewCount = economyTicketInputCount + 1;
+    handlerFirstClassTicketChange(true);
+    calculateTotal();
 
-//     economyTicketCount.value = economyTicketNewCount;
-//     document.getElementById("economy-count").value = economyTicketNewCount;
+});
 
-//     const economyTicketTotalCount = economyTicketNewCount * 100;
+// First Class Ticket Count Decrease
+const firstClassTicketDecreaseBtn = document.getElementById("first-class-decrease");
+firstClassTicketDecreaseBtn.addEventListener("click", function () {
+    handlerFirstClassTicketChange(false);
+    calculateTotal();
+});
+*/ 
 
-//     document.getElementById("sub-total").innerText = economyTicketTotalCount;
+/*
+// Economy Ticket Decrease
+const economyTicketdecreaseBtn = document.getElementById("economy-decrease");
+economyTicketdecreaseBtn.addEventListener("click", function () {
 
-// });
+    const economyTicketCount = document.getElementById("economy-count");
+    const economyTicketInputCount = parseInt(economyTicketCount.value);
+    const economyTicketNewCount = economyTicketInputCount - 1;
 
-// // Economy Ticket Decrease
+    economyTicketCount.value = economyTicketNewCount;
+    document.getElementById("economy-count").value = economyTicketNewCount;
 
-// const economyTicketdecreaseBtn = document.getElementById("economy-decrease");
-// economyTicketdecreaseBtn.addEventListener("click", function () {
+    const economyTicketTotalCount = economyTicketNewCount * 100;
 
-//     const economyTicketCount = document.getElementById("economy-count");
-//     const economyTicketInputCount = parseInt(economyTicketCount.value);
-//     const economyTicketNewCount = economyTicketInputCount - 1;
+    document.getElementById("sub-total").innerText = economyTicketTotalCount;
 
-//     economyTicketCount.value = economyTicketNewCount;
-//     document.getElementById("economy-count").value = economyTicketNewCount;
+});
+*/ 
 
-//     const economyTicketTotalCount = economyTicketNewCount * 100;
+/*
+// Economy Ticket Count Increase
+const economyTicketIncreaseBtn = document.getElementById("economy-increase");
+economyTicketIncreaseBtn.addEventListener("click", function () {
 
-//     document.getElementById("sub-total").innerText = economyTicketTotalCount;
+    handlerEconomyTicketChange(true);
+    calculateTotal();
 
-// });
+});
+
+// Economy Ticket Count Decrease
+
+const economyTicketdecreaseBtn = document.getElementById("economy-decrease");
+economyTicketdecreaseBtn.addEventListener("click", function () {
+    handlerEconomyTicketChange(false);
+    calculateTotal();
+});
+*/ 
