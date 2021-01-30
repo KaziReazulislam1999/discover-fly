@@ -132,3 +132,34 @@ nav ul li a:hover, a.active{
 button:hover{
     color: red;
 }
+#booking-Succes{
+    display: none;
+    padding: 40px;
+}
+.order-section{
+    width: 560px;
+    height: auto;
+    padding: 50px;
+    background-color: #fff;
+    margin: 0px auto;
+    margin-top: 190px ;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.success-details i{
+    color: chartreuse;
+    
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

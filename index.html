@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -30,7 +30,7 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main id="form-area" class="main-content container">
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
@@ -54,12 +54,14 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input id="first-class-count" class="inp-style inp-width" type="number" name="" value="0">
+                    <input type="number" id="first-class-count" class="inp-style inp-width" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    
-                    <button onclick="handlerFirstClassTicketChange(true)" id="first-class-increase"><i class="fas fa-plus"></i></button>
-                    <button onclick="handlerFirstClassTicketChange(false)" id="first-class-decrease"><i class="fas fa-minus"></i></button>
+
+                    <button onclick="handlerFirstClassTicketChange(true)" id="first-class-increase"><i
+                            class="fas fa-plus"></i></button>
+                    <button onclick="handlerFirstClassTicketChange(false)" id="first-class-decrease"><i
+                            class="fas fa-minus"></i></button>
 
                 </div>
             </div>
@@ -67,11 +69,13 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input id="economy-count" class="inp-style inp-width" type="number" name="" value="0">
+                    <input type="number" id="economy-count" class="inp-style inp-width" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button onclick="handlerEconomyTicketChange(true)" id="economy-increase"><i class="fas fa-plus"></i></button>
-                    <button onclick="handlerEconomyTicketChange(false)" id="economy-decrease"><i class="fas fa-minus"></i></button>
+                    <button onclick="handlerEconomyTicketChange(true)" id="economy-increase"><i
+                            class="fas fa-plus"></i></button>
+                    <button onclick="handlerEconomyTicketChange(false)" id="economy-decrease"><i
+                            class="fas fa-minus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -102,10 +106,10 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="book-now" class="btn-style">Book Now</button>
         </div>
 
-        <div class="booking-content">
+        <div id="book-content" class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
                 veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
@@ -113,7 +117,24 @@
         </div>
         </section>
 
-        <script src="js/index.js"></script>
+    </main>
+
+    <div id="booking-Succes" class="order-section">
+        <div class="booking-success-form">
+
+            <div class="success-details">
+                <i class="fas fa-check-circle fa-5x"></i>
+                <br>
+                <br>
+                <h1>Awesome <span style="color: chartreuse; font-size: 30px;font-weight: bolder;">!</span></h1>
+                <br>
+                <p>Your booking has been confirmed </p>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
